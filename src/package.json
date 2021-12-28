@@ -1,7 +1,7 @@
 {
 	"name": "@freevse/nativescript-blufi",
 	"version": "1.0.0",
-	"description": "Your awesome NativeScript plugin.",
+	"description": "Use the blu-fi WiFi provisioning protocol on android",
 	"main": "blufi",
 	"typings": "index.d.ts",
 	"nativescript": {
@@ -28,17 +28,17 @@
 		"NativeScript",
 		"JavaScript",
 		"Android",
-		"iOS"
+		"blufi"
 	],
 	"author": {
-		"name": "Your Name",
-		"email": "youremail@yourdomain.com"
+		"name": "Matthew Goulart",
+		"email": "matthew.goulart@gmail.com"
 	},
 	"bugs": {
-		"url": "https://github.com/matthew798/nativescript-blufi/issues"
+		"url": "https://github.com/FREEVSE/nativescript-blufi/issues"
 	},
 	"license": "Apache-2.0",
-	"homepage": "https://github.com/matthew798/nativescript-blufi",
+	"homepage": "https://github.com/FREEVSE/nativescript-blufi",
 	"devDependencies": {
 		"tns-core-modules": "^6.0.0",
 		"tns-platform-declarations": "^6.0.0",
