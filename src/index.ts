@@ -1,15 +1,14 @@
-declare const com: any;
+/// <reference path="android.d.ts"/>
 
-export const BlufiClient = com.esp32.blufi.BlufiClient;
-export const BlufiCallback = com.esp32.blufi.BlufiCallback;
+export import BlufiClient = com.esp32.blufi.BlufiClient;
+export import BlufiCallback = com.esp32.blufi.BlufiCallback;
+export import BlufiConfigureParams = com.esp32.blufi.params.BlufiConfigureParams;
 
-export const BlufiConfigureParams = com.esp32.blufi.params.BlufiConfigureParams;
-
-BlufiConfigureParams.prototype["setStaSSID"] = function(SSID: string) {
+BlufiConfigureParams.prototype.setStaSSID = function(SSID: string) {
     let arr = Array.create("byte", SSID.length);
     let encoder = new TextEncoder();
     let bytes = encoder.encode(SSID);
-
+    
     SSID
     .split('')
     .forEach((char: string, index: number) => 
@@ -18,9 +17,9 @@ BlufiConfigureParams.prototype["setStaSSID"] = function(SSID: string) {
     this.setStaSSIDBytes(arr);
 }
 
-export const BlufiScanResult = com.esp32.blufi.response.BlufiScanResult;
-export const BlufiStatusResponse = com.esp32.blufi.response.BlufiStatusResponse;
-export const BlufiVersionResponse = com.esp32.blufi.response.BlufiVersionResponse;
+export import BlufiScanResult = com.esp32.blufi.response.BlufiScanResult;
+export import BlufiStatusResponse = com.esp32.blufi.response.BlufiStatusResponse;
+export import BlufiVersionResponse = com.esp32.blufi.response.BlufiVersionResponse;
 
 export class BlufiUuids{
     public static Service: java.util.UUID = java.util.UUID.fromString("0000ffff-0000-1000-8000-00805f9b34fb");
